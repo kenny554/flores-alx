@@ -42,7 +42,7 @@ body {
 .titulo {
   margin-bottom: 180px;
   font-family: "Arial Narrow", Arial, sans-serif;
-  color: #ff2369; /*cambia color del titulo*/
+  color: #23f8ff; /*cambia color del titulo*/
   position: absolute;
   font-weight: bold;
   letter-spacing: 10px;
@@ -1646,7 +1646,7 @@ h1 {
 .moon {
   position: fixed;
   top: 1%;
-  left: 15%;
+  left: 20%;
   transform: translateX(-50%);
   width: 150px;
   height: 150px;
@@ -1726,12 +1726,14 @@ h1 {
 
 /* Estilos del primer GIF (Hollow Knight) */
 .gif-container {
+  top: 82%;
   bottom: 10px;
   right: 10px;
 }
 
 /* Estilos del segundo GIF (Hollow Knight Hornet) */
 .gifwoman-container {
+  top: 82%;
   bottom: 10px;
   left: 10px;
 }
