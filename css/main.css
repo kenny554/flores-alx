@@ -1740,7 +1740,7 @@ h1 {
 .gif-container img,
 .gifwoman-container img {
   max-width: 150px;
-  height: auto;
+  height: auto; /* Mantiene la proporción del GIF */
   border: none; /* Quita los bordes alrededor del GIF */
   border-radius: 8px; /* Opcional: bordes redondeados del GIF */
 }
@@ -1750,6 +1750,7 @@ h1 {
   .gif-container img,
   .gifwoman-container img {
     max-width: 100px;
+    height: 80px; /* Ajusta la altura para que los GIFs sean visibles */
   }
 }
 
@@ -1758,5 +1759,6 @@ h1 {
   .gif-container img,
   .gifwoman-container img {
     max-width: 80px;
+    height: 60px; /* Ajusta la altura para que los GIFs sean visibles */
   }
 }
