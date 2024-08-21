@@ -1740,28 +1740,60 @@ h1 {
 .gif-container {
   position: absolute; /* Asegura que el GIF no afecte otros elementos */
   bottom: 10px; /* Ajusta la distancia desde el borde inferior */
-  right: 10px; /* Ajusta la distancia desde el borde izquierdo */
+  right: 10px; /* Ajusta la distancia desde el borde derecho */
   z-index: 10; /* Asegura que el GIF esté por encima de otros elementos si es necesario */
 }
 
+/* Estilos del GIF */
 .gif-container img {
-  width: 320px; /* Establece el ancho específico del GIF */
-  height: 320px; /* Establece la altura específica del GIF */
+  max-width: 150px; /* Tamaño máximo en pantallas grandes */
+  height: auto; /* Mantiene la proporción del GIF */
   border: 2px solid #110303; /* Opcional: agregar un borde alrededor del GIF */
   border-radius: 8px; /* Opcional: bordes redondeados */
 }
 
+/* Media Query para pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+  .gif-container img {
+    max-width: 100px; /* Ajusta el tamaño máximo del GIF en pantallas pequeñas */
+  }
+}
 
+/* Media Query para pantallas muy pequeñas (dispositivos móviles muy pequeños) */
+@media (max-width: 400px) {
+  .gif-container img {
+    max-width: 80px; /* Ajusta aún más el tamaño del GIF si es necesario */
+  }
+}
+
+
+
+/* Estilos generales del contenedor del GIF */
 .gifwoman-container {
   position: absolute; /* Asegura que el GIF no afecte otros elementos */
   bottom: 10px; /* Ajusta la distancia desde el borde inferior */
-  left: 10px; /* Ajusta la distancia desde el borde izquierdo */
+  left: 10px; /* Ajusta la distancia desde el borde derecho */
   z-index: 10; /* Asegura que el GIF esté por encima de otros elementos si es necesario */
 }
 
+/* Estilos del GIF */
 .gifwoman-container img {
-  width: 260px; /* Establece el ancho específico del GIF */
-  height: 260px; /* Establece la altura específica del GIF */
+  max-width: 150px; /* Tamaño máximo en pantallas grandes */
+  height: auto; /* Mantiene la proporción del GIF */
   border: 2px solid #110303; /* Opcional: agregar un borde alrededor del GIF */
   border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+/* Media Query para pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+  .gif-container img {
+    max-width: 100px; /* Ajusta el tamaño máximo del GIF en pantallas pequeñas */
+  }
+}
+
+/* Media Query para pantallas muy pequeñas (dispositivos móviles muy pequeños) */
+@media (max-width: 400px) {
+  .gif-container img {
+    max-width: 80px; /* Ajusta aún más el tamaño del GIF si es necesario */
+  }
 }
