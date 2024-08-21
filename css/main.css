@@ -68,48 +68,15 @@ body {
   width: 100%; /* Ancho completo del contenedor */
   height: 100%; /* Alto completo del contenedor */
   filter: blur(0.1vmin); /* Aplicar un filtro de desenfoque */
-  background-image: radial-gradient(
-      ellipse at top,
-      transparent 0%,
-      var(--dark-color)
-    ),
-    radial-gradient(
-      ellipse at bottom,
-      var(--dark-color),
-      rgba(145, 233, 255, 0.2)
-    ),
-    repeating-linear-gradient(
-      220deg,
-      rgb(0, 0, 0) 0px,
-      rgb(0, 0, 0) 19px,
-      transparent 19px,
-      transparent 22px
-    ),
-    repeating-linear-gradient(
-      189deg,
-      rgb(0, 0, 0) 0px,
-      rgb(0, 0, 0) 19px,
-      transparent 19px,
-      transparent 22px
-    ),
-    repeating-linear-gradient(
-      148deg,
-      rgb(0, 0, 0) 0px,
-      rgb(0, 0, 0) 19px,
-      transparent 19px,
-      transparent 22px
-    ),
+  background-image: 
+    radial-gradient(ellipse at top, transparent 0%, var(--dark-color) 100%),
+    radial-gradient(ellipse at bottom, var(--dark-color) 0%, rgba(145, 233, 255, 0.2) 100%),
+    repeating-linear-gradient(220deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px),
+    repeating-linear-gradient(189deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px),
+    repeating-linear-gradient(148deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px),
     linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
 }
 
-/* Opcional: Para asegurarte de que el contenedor esté fijo en la vista */
-.night.fixed {
-  position: fixed; /* Usa fixed si deseas que el contenedor no se mueva al hacer scroll */
-  top: 0;
-  left: 0;
-  transform: none; /* Elimina la transformación */
-}
-  
 
 .flowers {
   position: relative;
