@@ -66,8 +66,9 @@ body {
   top: 0; /* Ajusta la posición vertical al principio de la vista */
   transform: translateX(-50%); /* Ajusta el centro del contenedor */
   width: 100%; /* Ancho completo del contenedor */
-  height: 100%; /* Alto completo del contenedor */
+  height: 100vh; /* Ajusta la altura a 82% de la vista */
   filter: blur(0.1vmin); /* Aplicar un filtro de desenfoque */
+  background-color: black; /* Color de fondo negro antes de aplicar el gradiente */
   background-image: 
     radial-gradient(ellipse at top, transparent 0%, var(--dark-color) 100%),
     radial-gradient(ellipse at bottom, var(--dark-color) 0%, rgba(145, 233, 255, 0.2) 100%),
