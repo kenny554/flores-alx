@@ -66,17 +66,20 @@ body {
   top: 0; /* Ajusta la posición vertical al principio de la vista */
   transform: translateX(-50%); /* Ajusta el centro del contenedor */
   width: 100%; /* Ancho completo del contenedor */
-  height: 100vh; /* Ajusta la altura a 82% de la vista */
-  filter: blur(0.1vmin); /* Aplicar un filtro de desenfoque */
-  background-color: black; /* Color de fondo negro antes de aplicar el gradiente */
+  height: 100vh; /* Ajusta la altura a 100% de la vista */
+  filter: blur(0.2vmin); /* Aplicar un filtro de desenfoque suave */
+  background-color: #0a0a0a; /* Color de fondo negro profundo */
   background-image: 
-    radial-gradient(ellipse at top, transparent 0%, var(--dark-color) 100%),
-    radial-gradient(ellipse at bottom, var(--dark-color) 0%, rgba(145, 233, 255, 0.2) 100%),
-    repeating-linear-gradient(220deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px),
-    repeating-linear-gradient(189deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px),
-    repeating-linear-gradient(148deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px),
-    linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.8) 60%),
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.8) 60%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.8) 60%),
+    radial-gradient(circle at 30% 80%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.8) 60%),
+    radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.8) 60%),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.9) 60%),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.8) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
 }
+
 
 
 .flowers {
@@ -1764,3 +1767,107 @@ h1 {
     height: 60px; /* Ajusta la altura para que los GIFs sean visibles */
   }
 }
+
+:root {
+  --shooting-star-color: #0d8eb5; /* Color de la estrella fugaz */
+}
+.shooting-star {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(transparent, var(--shooting-star-color));
+  animation: shooting-star 2s linear infinite;
+  transform: rotate(45deg);
+  filter: blur(1px);
+}
+
+.shooting-star:nth-child(2) {
+  top: 20%;
+  left: 60%;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+}
+
+.shooting-star:nth-child(3) {
+  top: 50%;
+  left: 70%;
+  animation-duration: 2.5s;
+  animation-delay: 1s;
+}
+
+/* Animación de las estrellas fugaces */
+@keyframes shooting-star {
+  0% {
+    transform: translateX(0) translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200px) translateY(200px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+
+:root {
+  --star-color: #fff;
+  --star-size: 10px;
+  --star-offset: 15px;
+  --glow-color: rgba(255, 255, 255, 0.8);
+  --glow-blur: 8px;
+}
+
+.star {
+  position: absolute;
+  width: var(--star-size);
+  height: var(--star-size);
+  background-color: var(--star-color);
+  clip-path: polygon(
+    50% 0%,   /* Parte superior */
+    61% 35%,  /* Punta derecha */
+    98% 35%,  /* Punta inferior derecha */
+    68% 57%,  /* Punta inferior izquierda */
+    79% 91%,  /* Punta superior izquierda */
+    50% 70%,  /* Parte inferior central */
+    21% 91%,  /* Punta superior izquierda */
+    32% 57%,  /* Punta inferior derecha */
+    2% 35%,   /* Punta inferior derecha */
+    39% 35%   /* Punta derecha */
+  );
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 var(--glow-blur) var(--glow-color);
+  animation: twinkle 2s infinite alternate;
+}
+
+/* Animación de parpadeo */
+@keyframes twinkle {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Agregar algunas estrellas con posiciones aleatorias */
+.star:nth-child(1) {
+  top: 20%;
+  left: 30%;
+}
+.star:nth-child(2) {
+  top: 50%;
+  left: 70%;
+}
+.star:nth-child(3) {
+  top: 80%;
+  left: 40%;
+}
+.star:nth-child(4) {
+  top: 30%;
+  left: 80%;
+}
+
+
