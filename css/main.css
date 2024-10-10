@@ -40,9 +40,9 @@ body {
 
 }
 .titulo {
-  margin-bottom: 180px;
+  margin-bottom: 185px;
   font-family: "Arial Narrow", Arial, sans-serif;
-  color: #23f8ff; /*cambia color del titulo*/
+  color: #f823ff; /*cambia color del titulo*/
   position: absolute;
   font-weight: bold;
   letter-spacing: 10px;
